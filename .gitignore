@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Donnees Neo4j en local
+neo4j_data/
+neo4j_logs/
+
+# Dossier de travail PPT (le .pptx final est versionne)
+docs/_build/
+docs/_qa*/
+
+# OS
+.DS_Store
+Thumbs.db
