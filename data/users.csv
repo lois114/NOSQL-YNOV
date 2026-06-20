@@ -1,0 +1,6 @@
+name,role,privilege_level
+alice,RH,standard
+bob,Développeur,standard
+charlie,Admin Système,admin
+diana,RSSI,security
+eve,Stagiaire,standard

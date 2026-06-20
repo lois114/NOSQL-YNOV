@@ -1,0 +1,7 @@
+name,type,criticality,internet_exposed,last_patch
+PC-ALICE,workstation,low,false,2024-11-02
+PC-BOB,workstation,medium,false,2024-09-15
+SRV-WEB,server,medium,true,2024-06-20
+SRV-DB,database,high,false,2024-08-01
+DC-01,domain_controller,critical,false,2024-03-10
+NAS-BACKUP,backup_server,critical,false,2023-12-05

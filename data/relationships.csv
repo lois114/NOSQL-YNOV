@@ -1,0 +1,48 @@
+source,source_label,source_key,rel_type,target,target_label,target_key
+alice,User,name,USES,PC-ALICE,Machine,name
+eve,User,name,USES,PC-ALICE,Machine,name
+bob,User,name,USES,PC-BOB,Machine,name
+charlie,User,name,USES,PC-BOB,Machine,name
+diana,User,name,USES,PC-ALICE,Machine,name
+alice,User,name,MEMBER_OF,RH,Group,name
+eve,User,name,MEMBER_OF,RH,Group,name
+bob,User,name,MEMBER_OF,DEV,Group,name
+charlie,User,name,MEMBER_OF,ADMINS,Group,name
+diana,User,name,MEMBER_OF,SECURITY,Group,name
+charlie,User,name,ADMIN_OF,DC-01,Machine,name
+charlie,User,name,ADMIN_OF,SRV-DB,Machine,name
+charlie,User,name,ADMIN_OF,NAS-BACKUP,Machine,name
+RH,Group,name,HAS_ACCESS_TO,SRV-WEB,Machine,name
+DEV,Group,name,HAS_ACCESS_TO,SRV-WEB,Machine,name
+DEV,Group,name,HAS_ACCESS_TO,SRV-DB,Machine,name
+ADMINS,Group,name,HAS_ACCESS_TO,DC-01,Machine,name
+ADMINS,Group,name,HAS_ACCESS_TO,SRV-DB,Machine,name
+ADMINS,Group,name,HAS_ACCESS_TO,NAS-BACKUP,Machine,name
+SECURITY,Group,name,HAS_ACCESS_TO,DC-01,Machine,name
+PC-ALICE,Machine,name,CONNECTED_TO,SRV-WEB,Machine,name
+PC-ALICE,Machine,name,CONNECTED_TO,PC-BOB,Machine,name
+PC-BOB,Machine,name,CONNECTED_TO,SRV-WEB,Machine,name
+PC-BOB,Machine,name,CONNECTED_TO,SRV-DB,Machine,name
+SRV-WEB,Machine,name,CONNECTED_TO,SRV-DB,Machine,name
+SRV-DB,Machine,name,CONNECTED_TO,DC-01,Machine,name
+SRV-DB,Machine,name,CONNECTED_TO,NAS-BACKUP,Machine,name
+DC-01,Machine,name,CONNECTED_TO,NAS-BACKUP,Machine,name
+SRV-WEB,Machine,name,EXPOSES,HTTP,Service,name
+SRV-WEB,Machine,name,EXPOSES,HTTPS,Service,name
+SRV-WEB,Machine,name,EXPOSES,SSH,Service,name
+SRV-DB,Machine,name,EXPOSES,MongoDB,Service,name
+SRV-DB,Machine,name,EXPOSES,SSH,Service,name
+DC-01,Machine,name,EXPOSES,SMB,Service,name
+PC-BOB,Machine,name,EXPOSES,RDP,Service,name
+NAS-BACKUP,Machine,name,EXPOSES,SMB,Service,name
+SRV-WEB,Machine,name,HAS_VULNERABILITY,CVE-2021-44228,Vulnerability,cve
+SRV-WEB,Machine,name,HAS_VULNERABILITY,CVE-2022-22965,Vulnerability,cve
+PC-BOB,Machine,name,HAS_VULNERABILITY,CVE-2019-0708,Vulnerability,cve
+DC-01,Machine,name,HAS_VULNERABILITY,CVE-2020-1472,Vulnerability,cve
+NAS-BACKUP,Machine,name,HAS_VULNERABILITY,CVE-2023-0001,Vulnerability,cve
+SRV-DB,Machine,name,HAS_VULNERABILITY,CVE-2023-0001,Vulnerability,cve
+SRV-DB,Machine,name,HOSTS,Base clients,Resource,name
+SRV-DB,Machine,name,HOSTS,Données RH,Resource,name
+SRV-DB,Machine,name,HOSTS,Secrets applicatifs,Resource,name
+DC-01,Machine,name,HOSTS,Active Directory,Resource,name
+NAS-BACKUP,Machine,name,HOSTS,Sauvegardes,Resource,name
